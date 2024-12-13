@@ -1,0 +1,79 @@
+{
+  "name": "month",
+  "displayName": "month",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "adhishtanaka",
+  "author": {
+    "name": "adhishtanaka",
+    "email": "kulasoooriyaa@gmail.com"
+  },
+  "icon": "media/Icon.png",
+  "license": "LICENSE",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onSave"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "custom-sidebar",
+          "title": "Month",
+          "icon": "$(calendar)"
+        }
+      ]
+    },
+    "views": {
+      "custom-sidebar": [
+        {
+          "id": "month.sidePanel",
+          "name": "Dashboard",
+          "contextualTitle": "Dashboard",
+          "command": "month.sidePanel",
+          "type": "webview"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "month.getData",
+        "title": "month"
+      },
+      {
+        "command": "month.sidePanel",
+        "title": "sidePanel",
+        "category": "View"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
