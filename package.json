@@ -10,6 +10,15 @@
   },
   "icon": "media/Icon.png",
   "license": "LICENSE",
+  "homepage": "https://github.com/Adhishtanaka/Month-Extension/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/Adhishtanaka/Month-Extension/issues",
+    "email": "kulasoooriyaa@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Adhishtanaka/Month-Extension.git"
+  },
   "engines": {
     "vscode": "^1.96.0"
   },
