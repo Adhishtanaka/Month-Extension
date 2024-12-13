@@ -2,7 +2,7 @@
   "name": "month",
   "displayName": "month",
   "description": "Month is a Visual Studio Code extension that transforms your activity into an interactive calendar, tracking your daily coding sessions. It displays the folders and repositories worked on each day, allowing quick access to project details and commit history",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "adhishtanaka",
   "author": {
     "name": "adhishtanaka",
