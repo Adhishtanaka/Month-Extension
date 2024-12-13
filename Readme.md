@@ -37,4 +37,4 @@ This extension is open source and available under the [MIT License](LICENSE).
 
 ## Contributing
 
-If you find any bugs or want to suggest improvements, feel free to open an issue or pull request on the [GitHub repository](https://github.com/Adhishtanaka/Month-Extension).
+If you find any bugs or want to suggest improvements, feel free to open an issue or pull request on the [GitHub repository](https://github.com/Adhishtanaka/Month-Extension/pulls).
