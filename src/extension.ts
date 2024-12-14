@@ -122,7 +122,12 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const disposable2 = vscode.window.registerWebviewViewProvider("month.sidePanel", sidebarProvider);
 
-	context.subscriptions.push(disposable0, disposable1, disposable2);
+	const disposable3 = vscode.commands.registerCommand('month.clearData', () => {
+		context.globalState.update('commitData', []);
+        context.globalState.update('projectData', []);
+		vscode.window.showInformationMessage('Commit data and project data have been cleared.');
+	});
+	context.subscriptions.push(disposable0, disposable1, disposable2, disposable3);
 }
 
 export function deactivate() { }

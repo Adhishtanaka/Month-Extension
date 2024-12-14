@@ -1,8 +1,8 @@
 {
   "name": "month",
-  "displayName": "month",
+  "displayName": "Month",
   "description": "Month is a Visual Studio Code extension that transforms your activity into an interactive calendar, tracking your daily coding sessions. It displays the folders and repositories worked on each day, allowing quick access to project details and commit history",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "adhishtanaka",
   "author": {
     "name": "adhishtanaka",
@@ -31,6 +31,44 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "walkthroughs": [
+      {
+        "id": "Month",
+        "title": "Welcome to the Month Extension",
+        "description": "Learn how to track your coding activities and GitHub commits using the Month Extension. Note: When you use the extension for the first time, the calendar will be empty. The coding calendar updates only after you start coding in some projects. The commit calendar updates only after authenticating with GitHub and making commits to repositories.",
+        "steps": [
+          {
+            "id": "step-1",
+            "title": "View the Calendar",
+            "description": "Access the interactive calendar in the activity bar to see your daily coding activity and GitHub commits. Initially, the calendar will be empty until you start coding or commit to projects.",
+            "media": {
+              "image": "media/s1.png",
+              "altText": "View the Calendar"
+            },
+            "completionEvents": ["onView:month.sidePanel"]
+          },
+          {
+            "id": "step-2",
+            "title": "Explore Detailed Activity",
+            "description": "Click on a specific day in the calendar to see detailed activity, such as project folders or GitHub repositories. Coding activity and commits will only appear once they have been logged.",
+            "media": {
+              "image": "media/a1.gif",
+              "altText": "Explore Detailed Activity"
+            }
+          },
+          {
+            "id": "step-3",
+            "title": "Switch Views and Authenticate with GitHub",
+            "description": "Toggle between the 'Coding Time' view and the 'Commit History' view to analyze your activities. Ensure you log in to your GitHub account to enable commit tracking and access your GitHub data. The commit calendar will update only after successful authentication and committing changes to your repositories.",
+            "media": {
+              "image": "media/a1.gif",
+              "altText": "Switch Views and Authenticate with GitHub"
+            },
+            "completionEvents": ["onCommand:month.getData"]
+          }
+        ]
+      }
+    ],
     "viewsContainers": {
       "activitybar": [
         {
@@ -60,6 +98,10 @@
         "command": "month.sidePanel",
         "title": "sidePanel",
         "category": "View"
+      },
+      {
+        "command": "month.clearData",
+        "title": "Clear Commit and Project Data"
       }
     ]
   },
@@ -72,17 +114,17 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.9",
-    "@types/node": "20.x",
-    "@types/vscode": "^1.96.0",
-    "@typescript-eslint/eslint-plugin": "^8.10.0",
-    "@typescript-eslint/parser": "^8.7.0",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1",
+    "@types/mocha": "10.0.10",
+    "@types/node": "22.10.2",
+    "@types/vscode": "1.96.0",
+    "@typescript-eslint/eslint-plugin": "8.18.0",
+    "@typescript-eslint/parser": "8.18.0",
+    "@vscode/test-cli": "0.0.10",
+    "@vscode/test-electron": "2.4.1",
     "eslint": "^9.13.0",
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "axios": "^1.7.9"
+    "axios": "1.7.9"
   }
 }
